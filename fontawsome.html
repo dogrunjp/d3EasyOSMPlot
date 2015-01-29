@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>d3EasyOSMPlot</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css">
+    <style>
+        g.icn{
+            font-family: FontAwesome;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" style="width:800px;height: 400px"></div>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+    <script>
+        //place map inside a paragraph element with "#map"
+        var myLocation = [34.7754,138.0147];
+        var mag = 15;
+        var colors = ["#1e90ff","#ff8c00","#dc143c"];
+        var color = d3.scale.ordinal().domain([0,5]).range(colors);
+
+
+        var map = L.map('map').setView(myLocation,mag);
+        mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+        L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+                    attribution: '&copy; ' + mapLink + ' Contributors',
+                    maxZoom: 18
+                }).addTo(map);
+
+        map._initPathRoot();
+
+        //simply pick up SVG from map object
+        var svg = d3.select("#map").select("svg"),
+                g = svg.append("g").attr("class","icn");
+
+        //Loading and Projecting GeoJSON
+        d3.json("data/circle.json", function(collection){
+            collection.objects.forEach(function(d){
+                //配列中(object.circle)の緯度経度情報をd.LatLngに渡す
+                d.LatLng = new L.LatLng(d.circle.coordinates[0],
+                        d.circle.coordinates[1]);
+            });
+
+            var feature = g.selectAll("text")
+                    .data(collection.objects)
+                    .enter().append("text")
+                    .attr({"font-family":"FontAwesome","font-size":"16px","opacity":1,"fill":"#ff4500"})
+                    .attr("fill", function(d,i){return color(i)})
+                    .text('\uf207');
+
+            map.on("viewreset", update);
+            update();
+
+            function update(){
+                feature.attr("transform",
+                function(d){
+                    return "translate(" +
+                            map.latLngToLayerPoint(d.LatLng).x + "," +
+                            map.latLngToLayerPoint(d.LatLng).y + ")";
+                })
+            }
+        })
+
+    </script>
+
+</body>
+</html>
