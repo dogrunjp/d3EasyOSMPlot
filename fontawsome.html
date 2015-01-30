@@ -43,6 +43,7 @@
                 d.LatLng = new L.LatLng(d.circle.coordinates[0],
                         d.circle.coordinates[1]);
             });
+            console.log(collection)
 
             var feature = g.selectAll("text")
                     .data(collection.objects)

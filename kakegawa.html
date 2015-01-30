@@ -37,9 +37,31 @@
                 .defer(d3.json,"data/passenger.json")
                 .await(ready);
 
-        function ready(error,result1,result2){
-            console.log(result2);
-            console.log(result1);
+        function ready(error,position,passenger){
+                position.entity.forEach(function(d){
+                //配列中(object.circle)の緯度経度情報をd.LatLngに渡す
+                d.LatLng = new L.LatLng(d.vehiclePosition.position.latitude,
+                        d.vehiclePosition.position.longitude);
+            });
+            console.log(position);
+            var feature = g.selectAll("circle")
+                    .data(position.entity)
+                    .enter().append("circle")
+                    .style({"stroke": "#1e90ff","stroke-width":"4px","opacity":0.8,"fill":"#ff4500"})
+                    .attr("r",8);
+
+            map.on("viewreset", update);
+            update();
+
+            function update(){
+                feature.attr("transform",
+                function(d){
+                    return "translate(" +
+                            map.latLngToLayerPoint(d.LatLng).x + "," +
+                            map.latLngToLayerPoint(d.LatLng).y + ")";
+                })
+            }
+
         }
 
         /*
