@@ -1,0 +1,529 @@
+{
+    "header": {
+    "passenger_report_version": "0.1",
+    "timestamp": 1422582669
+  },
+  "entity": [
+    {
+      "id": "5720147234914304",
+      "passengerUpdate": {
+        "tripDescriptor": {
+          "tripId": "222135Trp6",
+          "routeId": "TS"
+        },
+        "vehicleDescriptor": {
+          "id": "5720147234914304",
+          "label": "掛川市街地循環線 南回り"
+        },
+        "stopEventUpdate": [
+          {
+            "stopSequence": 1,
+            "stopId": "n1444-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 2,
+            "stopId": "n1484-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 3,
+            "stopId": "n3454-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 4,
+            "stopId": "n1485-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 5,
+            "stopId": "n1486-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 6,
+            "stopId": "n1487-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 7,
+            "stopId": "n1488-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 8,
+            "stopId": "n1489-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 9,
+            "stopId": "n1490-1",
+            "departure": {
+              "ride": 1,
+              "leave": 0,
+              "numberOfPassengers": 1
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 10,
+            "stopId": "n1491-1",
+            "departure": {
+              "ride": 1,
+              "leave": 0,
+              "numberOfPassengers": 2
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 11,
+            "stopId": "n1492-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 2
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 12,
+            "stopId": "n1493-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 2
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 13,
+            "stopId": "n1494-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 2
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 14,
+            "stopId": "n1495-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 2
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 15,
+            "stopId": "n1496-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 2
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 16,
+            "stopId": "n1497-1",
+            "departure": {
+              "ride": 2,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 17,
+            "stopId": "n1498-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 18,
+            "stopId": "n1499-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 19,
+            "stopId": "n1500-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 20,
+            "stopId": "n1502-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 21,
+            "stopId": "n1503-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 22,
+            "stopId": "n1504-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 23,
+            "stopId": "n1505-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 24,
+            "stopId": "n1506-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 26,
+            "stopId": "n1508-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 4
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 27,
+            "stopId": "n1509-1",
+            "departure": {
+              "ride": 1,
+              "leave": 0,
+              "numberOfPassengers": 5
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 28,
+            "stopId": "n1510-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 5
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 29,
+            "stopId": "n1511-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 5
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 30,
+            "stopId": "n3455-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 5
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 31,
+            "stopId": "n62046-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 5
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "PASSED"
+          },
+          {
+            "stopSequence": 32,
+            "stopId": "n3455-2",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 33,
+            "stopId": "n1512-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 34,
+            "stopId": "n1513-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 35,
+            "stopId": "n1514-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 36,
+            "stopId": "n1515-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 37,
+            "stopId": "n1516-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 38,
+            "stopId": "n1517-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 39,
+            "stopId": "n1454-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 40,
+            "stopId": "n1518-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 41,
+            "stopId": "n1519-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 42,
+            "stopId": "n1520-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 43,
+            "stopId": "n1521-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 44,
+            "stopId": "n1522-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 45,
+            "stopId": "n1523-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 46,
+            "stopId": "n1524-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          },
+          {
+            "stopSequence": 47,
+            "stopId": "n1444-1",
+            "departure": {
+              "ride": 0,
+              "leave": 0,
+              "numberOfPassengers": 0
+            },
+            "scheduleRelationship": "SCHEDULED",
+            "busstopStatus": "WILL_STOP_AT"
+          }
+        ]
+      }
+    }
+  ]
+}
