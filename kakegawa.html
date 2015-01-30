@@ -7,17 +7,19 @@
 
 </head>
 <body>
-    <div id="map" style="width:800px;height: 400px"></div>
+    <div id="osmap" style="width:900px;height: 550px"></div>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
     <script src="http://d3js.org/queue.v1.min.js"></script>
     <script>
         //place map inside a paragraph element with "#map"
         var myLocation = [34.7754,138.0147];
-        var mag = 15;
+        var mag = 14;
+        var colors = ["#1e90ff","#ff8c00","#dc143c"];
+        var color = d3.scale.ordinal().domain([0,20]).range(colors);
 
 
-        var map = L.map('map').setView(myLocation,mag);
+        var map = L.map('osmap').setView(myLocation,mag);
         mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
         L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
                     attribution: '&copy; ' + mapLink + ' Contributors',
@@ -27,9 +29,8 @@
         map._initPathRoot();
 
         //simply pick up SVG from map object
-        var svg = d3.select("#map").select("svg"),
+        var svg = d3.select("#osmap").select("svg"),
                 g = svg.append("g");
-
 
         //Loading and Projecting GeoJSON
         queue()
@@ -38,46 +39,54 @@
                 .await(ready);
 
         function ready(error,position,passenger){
-                position.entity.forEach(function(d){
-                //配列中(object.circle)の緯度経度情報をd.LatLngに渡す
+            position.entity.forEach(function(d){
+                //緯度経度情報をd.LatLngに渡す
                 d.LatLng = new L.LatLng(d.vehiclePosition.position.latitude,
                         d.vehiclePosition.position.longitude);
+                d.label = d.vehiclePosition.vehicleDescriptor.label;
             });
-            console.log(position);
+            passenger.entity.forEach(function(d){
+                d.numberOfPassenger = d.passengerUpdate.stopEventUpdate.pop().departure.numberOfPassengers;
+                //d.label = d.passengerUpdate.vehicleDescriptor.label;
+
+            });
+
+
             var feature = g.selectAll("circle")
                     .data(position.entity)
                     .enter().append("circle")
                     .style({"stroke": "#1e90ff","stroke-width":"4px","opacity":0.8,"fill":"#ff4500"})
-                    .attr("r",8);
+                    .attr("r",10)
+                    .on("click",function(d){
+                        //idを取得
+                        var id = d.id;
+                        var label = d.label;
+                        console.log(d);
+                        //positionとpassengerのidによって一致するデータのみfilterする
 
-            map.on("viewreset", update);
-            update();
+                        var n = passenger.entity.filter(function(p,i){
+                                return p.id =  id;
+                        });
 
-            function update(){
-                feature.attr("transform",
-                function(d){
-                    return "translate(" +
-                            map.latLngToLayerPoint(d.LatLng).x + "," +
-                            map.latLngToLayerPoint(d.LatLng).y + ")";
-                })
-            }
+                        myNumber = n.pop().numberOfPassenger;
+                        //結合したデータより最新の乗客数（numberOfPassenger）とlabelを表示
+                        alert(label + ', ただいまの乗客数：' + myNumber);
+                    });
 
-        }
 
-        /*
-        d3.json("data/po.json", function(collection){
-            collection.objects.forEach(function(d){
-                //配列中(object.circle)の緯度経度情報をd.LatLngに渡す
-                d.LatLng = new L.LatLng(d.circle.coordinates[0],
-                        d.circle.coordinates[1]);
+            //Leaflet.jsのtooltip表示、d3.mouse(this)の値が正しくない？
+            /*
+            feature.on("mousedown", function(d){
+                var mousepoint = d3.mouse(this);
+
+                console.log(d, mousepoint, map.layerPointToLatLng(mousepoint));
+
+                L.popup()
+                        .setLatLng(map.layerPointToLatLng(mousepoint))
+                        .setContent('<p>d3.OSMPlot kaekgawa version</p>')
+                        .openOn(map);
             });
-            console.log(collection);
-
-            var feature = g.selectAll("circle")
-                    .data(collection.objects)
-                    .enter().append("circle")
-                    .style({"stroke": "#1e90ff","stroke-width":"4px","opacity":0.8,"fill":"#ff4500"})
-                    .attr("r",8);
+            */
 
             map.on("viewreset", update);
             update();
@@ -90,8 +99,7 @@
                             map.latLngToLayerPoint(d.LatLng).y + ")";
                 })
             }
-        })
-        */
+        }
 
     </script>
 
