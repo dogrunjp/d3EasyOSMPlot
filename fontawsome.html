@@ -19,8 +19,8 @@
         //place map inside a paragraph element with "#map"
         var myLocation = [34.7754,138.0147];
         var mag = 15;
-        var colors = ["#1e90ff","#ff8c00","#dc143c"];
-        var color = d3.scale.ordinal().domain([0,5]).range(colors);
+        var colors = ["#f8b500","#d7003a"];
+        var color = d3.scale.linear().domain([0,5]).range(colors);
 
 
         var map = L.map('map').setView(myLocation,mag);
