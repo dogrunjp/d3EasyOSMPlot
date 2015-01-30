@@ -15,8 +15,8 @@
         //place map inside a paragraph element with "#map"
         var myLocation = [34.7754,138.0147];
         var mag = 14;
-        var colors = ["#1e90ff","#ff8c00","#dc143c"];
-        var color = d3.scale.ordinal().domain([0,20]).range(colors);
+        var colors = ["#fef263","#ea5506"];
+        var color = d3.scale.linear().domain([0,30]).range(colors);
 
 
         var map = L.map('osmap').setView(myLocation,mag);
@@ -52,25 +52,33 @@
             });
 
 
+            var nop,id,label;
+
             var feature = g.selectAll("circle")
                     .data(position.entity)
                     .enter().append("circle")
                     .style({"stroke": "#1e90ff","stroke-width":"4px","opacity":0.8,"fill":"#ff4500"})
+                    .style("fill",function(d){
+                        //idを取得
+                        //positionとpassengerのidによって一致するデータのみfilterする
+                        id = d.id;
+                        label = d.label;
+                        n = passenger.entity.filter(function(p,i){
+                                return p.id =  id;
+                        });
+                        nop = n.pop().numberOfPassenger;
+                        console.log(nop);
+                        return color(nop);
+                    })
                     .attr("r",10)
                     .on("click",function(d){
-                        //idを取得
-                        var id = d.id;
-                        var label = d.label;
-                        console.log(d);
-                        //positionとpassengerのidによって一致するデータのみfilterする
-
+                        /*
                         var n = passenger.entity.filter(function(p,i){
                                 return p.id =  id;
                         });
-
-                        myNumber = n.pop().numberOfPassenger;
+                        */;
                         //結合したデータより最新の乗客数（numberOfPassenger）とlabelを表示
-                        alert(label + ', ただいまの乗客数：' + myNumber);
+                        alert(label + ', ただいまの乗客数：' + nop);
                     });
 
 
