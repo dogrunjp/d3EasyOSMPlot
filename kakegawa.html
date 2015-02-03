@@ -34,11 +34,15 @@
 
         //Loading and Projecting GeoJSON
         queue()
-                .defer(d3.json,"data/position.json")
-                .defer(d3.json,"data/passenger.json")
+                //.defer(d3.json,"data/position.json")
+                //.defer(d3.json,"data/passenger.json")
+                .defer(d3.json,"http://opentrans.it/feed/json/vehicle-positions/agencies/5707702298738688")
+                .defer(d3.json,"http://opentrans.it/feed/json/passenger-update/agencies/5707702298738688")
                 .await(ready);
 
         function ready(error,position,passenger){
+            //console.log(position);
+            //console.log(passenger);
             position.entity.forEach(function(d){
                 //緯度経度情報をd.LatLngに渡す
                 d.LatLng = new L.LatLng(d.vehiclePosition.position.latitude,

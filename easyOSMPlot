@@ -1,0 +1,9 @@
+var d3easyOSMPlot = {}
+
+d3easyOSMPlot.kakegawa = function(){
+    var myLocation = [34.7754,138.0147];
+    var mag = 14;
+    var colors = ["#fef263","#ea5506"];
+    var color = d3.scale.linear().domain([0,30]).range(colors);
+
+};

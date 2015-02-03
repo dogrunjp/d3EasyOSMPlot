@@ -1,0 +1,30 @@
+{
+  "header": {
+    "vehicle_position_report_version": "0.1",
+    "timestamp": 1422668850
+  },
+  "entity": [
+    {
+      "id": "5720147234914304",
+      "vehiclePosition": {
+        "tripDescriptor": {
+          "tripId": "222135Trp6",
+          "routeId": "TS"
+        },
+        "vehicleDescriptor": {
+          "id": "5720147234914304",
+          "label": "掛川市街地循環線 南回り"
+        },
+        "position": {
+          "latitude": 34.761524,
+          "longitude": 137.99863,
+          "bearing": 172,
+          "speed": 5.75
+        },
+        "stopId": "n3455-1",
+        "currentStopSequence": 30,
+        "currentStatus": 2
+      }
+    }
+  ]
+}
